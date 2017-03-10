@@ -1,21 +1,74 @@
 body{
-  background-color: darkgrey;
-}
-hr{
-
+  background-color: #1d1d1b;
+  padding-top: 0px;
 }
 .hr-m{
   background-color: black;
   height: 1px;
   width: 75%;
 }
-/*.bar{
-  margin-left: 30px;
-  margin-right: 30px;
-}*/
-.navbar{
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+
+/*Navegation Bar*/
+.navbar-color{
+  background: linear-gradient(to right, #ecd06f 0%,#ecd06f 30%,#1d1d1b 30%,#1d1d1b 100%);
+  border: 0px;
+}
+.navbar-color .navbar-brand{
+  color: #1d1d1b;
+}
+.navbar-color .navbar-brand:hover,
+.navbar-color .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-color .navbar-nav > li > a {
+  color: #ecd06f;
+}
+.navbar-color .navbar-nav > li > a:hover,
+.navbar-color .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+.navbar-color .navbar-nav > .active > a,
+.navbar-color .navbar-nav > .active > a:hover,
+.navbar-color .navbar-nav > .active > a:focus {
+  color: #1d1d1b;
+  background-color: #ecd06f;
+}
+.navbar-color .navbar-nav > .disabled > a,
+.navbar-color .navbar-nav > .disabled > a:hover,
+.navbar-color .navbar-nav > .disabled > a:focus {
+  color: #1d1d1b;
+  background-color: transparent;
+}
+.navbar-color .navbar-toggle {
+  border-color: #ecd06f;
+}
+.navbar-color .navbar-toggle:hover,
+.navbar-color .navbar-toggle:focus {
+  background-color: #1d1d1b;
+  border-color: #fff;
+}
+.navbar-color .navbar-toggle .icon-bar {
+  background-color: #ecd06f;
+}
+.navbar-color .navbar-collapse,
+.navbar-color .navbar-form {
+  border-color: #1d1d1b;
+}
+.navbar-color .navbar-nav > .open > a,
+.navbar-color .navbar-nav > .open > a:hover,
+.navbar-color .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #1d1d1b;
+}
+
+/*To fix any element to top with scrollmenu.js*/
+.menu-fix {
+	position: fixed;
+	z-index:100;
+	top:0;
+  left: 0;
+	width:100%;
+	box-shadow:0px 4px 3px rgba(0,0,0,.5);
 }
