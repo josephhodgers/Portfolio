@@ -13,7 +13,7 @@
 
   <header>
     <!-- Navegation Bar-->
-    <nav id="menu" class="navbar navbar-color">
+    <nav id="menu" class="navbar navbar-color menu">
 
       <div class="container">
 
@@ -30,9 +30,9 @@
         <!-- Navegation menu-->
         <div id="navegation" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li id="about-click" class="about-click active" target="about"><a href="#">About</a></li>
-            <li id="portfolio-click" class="portfolio-click" target="portfolio"><a href="#">Portfolio</a></li>
-            <li id="contact-click" class="contact-click" target="contact"><a href="#">Contact</a></li>
+            <li id="about-click" class="active"><a href="#about">About</a></li>
+            <li id="portfolio-click"><a href="#portfolio">Portfolio</a></li>
+            <li id="contact-click"><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -44,8 +44,7 @@
 
     <!-- About: Personal description -->
     <div id="main" class="container">
-      <section id="about" class="text-center">
-        <div id="cuerpo1" class="white-container">
+      <section class="text-center white-container" id="about">
           <div class="row">
             <!-- Description about person-->
             <div class="col-sm-8 col-md-8">
@@ -66,28 +65,98 @@
               <img class="img img-responsive img-circle text-center " src="img/joseph-d.png" alt="Joseph Hodgers">
             </div>
           </div>
-        </div>
       </section>
       <!-- End About -->
 
       <!-- Portfolio: all our sites desings -->
-      <section id="portfolio">
-        <div class="yellow-container">
+      <section id="portfolio" class="text-center yellow-container">
+        <div >
+          <h2>My Recent Work!!</h2>
+        </div>
 
+        <div>
+          <ul class="row">
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-4">
+              <a href="link" target="_blank">
+                <img src="img/nombreimagen.jpg" alt="work preview">
+              </a>
+            </li>
+
+          </ul>
         </div>
       </section >
       <!-- End Portfolio -->
 
       <!-- Contact: personal links again, contact number and mail -->
-      <section id="contact">
-        <div class="white-container">
+      <section id="contact" class="white-container">
+          <div class="text-center contact-container">
+            <div class="white-container">
+              <h2>Say Hello!!</h2>
+              <hr class="hr-s">
+              <h4>Talk nerdy to me</h4>
+              <br>
+              <div id="feedback">
+                <form id="contact-form" action="#contact" method="post">
+                  <div>
+                    <div id="name-input">
+                      <label for="name">Name: </label>
+                      <input id="name" type="text" name="name" value="Your name">
+                    </div>
+                  </div>
+                  <div>
+                    <div id="email-input">
+                      <label for="email">Email: </label>
+                      <input id="email" type="text" name="email" value="email">
+                    </div>
+                  </div>
+                  <div>
+                    <div id="message-input">
+                      <label for="message">Comment: </label>
+                      <input id="message" type="text" name="message" value="What's Up">
+                    </div>
+                  </div>
+                  <div>
+                    <div id="submit-form">
+                      <button type="submit" name="send" class="btn btn-sm btn-default fa">Send It</button>
+                    </div>
+                  </div>
 
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <h3>Let me a touch!!</h3>
           <button type="button" class="btn btn-sm btn-default fa fa-twitter" name="twitter"> Twitter</button>
           <button type="button" class="btn btn-sm btn-default fa fa-github" name="github"> GitHub</button>
           <button type="button" class="btn btn-sm btn-default fa fa-linkedin" name="linkedin"> Linkedin</button>
           <button type="button" class="btn btn-sm btn-default fa fa-free-code-camp" name="freecodecamp"> FreeCodeCamp</button>
 
-        </div>
       </section>
       <!-- End Contact -->
     </div>
@@ -99,8 +168,8 @@
 
     <!-- Call Script for fixed scroll  -->
     <script src="js/scrollmenu.js" type="text/javascript"></script>
-    <script src="js/scroll-to-element.js" type="text/javascript"></script>
-    <!--<script src="js/focus-with-scroll.js" type="text/javascript"></script>-->
+    <!-- Call Script for focus with the scroll bar  -->
+    <script src="js/focus-with-scroll.js" type="text/javascript"></script>
   </body>
 
   <footer>

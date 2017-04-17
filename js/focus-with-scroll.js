@@ -1,32 +1,47 @@
-// EVENTO CUANDO SE MUEVE EL SCROLL, EL MISMO APLICA TAMBIEN CUANDO SE RESIZA
 var change= false;
-$(window).scroll(function(){
-    window_a = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
-    scroll_a = parseInt($("#about").height()); // VALOR DE TU DIV
-    if (window_a > scroll_a) { // SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
-       // ACA MUESTRAS EL OTRO DIV Y EL OCULTAS EL DIV QUE QUIERES
-       $("#about-click").addClass("active");
-    } else {
-      $("#about-click").removeClass("active");
-    }
+
+//smoothscroll
+$('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    $(document).off("scroll");
+
+    $('a').each(function () {
+        $(this).removeClass('active');
+    })
+    $(this).addClass('active');
+
+    var target = this.hash,
+        menu = target;
+    $target = $(target);
+    $('html, body').stop().animate({
+        'scrollTop': $target.offset().top+2
+    }, 500, 'swing', function () {
+        window.location.hash = target;
+        $(document).on("scroll", onScroll);
+    });
 });
+
+//funcion scroll
 $(window).scroll(function(){
-    window_p = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
-    scroll_p = parseInt($("#portfolio").height()); // VALOR DE TU DIV
-    if (window_p > scroll_p) { // SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
+    window_a = $(window).scrollTop(); // altura de mi scroll
+    scroll_a = parseInt($("#about").height()); // altura de mi section about
+    scroll_p = parseInt($("#portfolio").height()); // altura de mi section portfolio
+    scroll_c = parseInt($("#contact").height()); // altura de mi section contact
+
+    if (window_a < scroll_a ){ // SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
        // ACA MUESTRAS EL OTRO DIV Y EL OCULTAS EL DIV QUE QUIERES
-       $("#portfolio-click").addClass("active");
-    } else {
+      $("#about-click").addClass("active");
       $("#portfolio-click").removeClass("active");
-    }
-});
-$(window).scroll(function(){
-    window_c = $(window).scrollTop(); // VALOR QUE SE HA MOVIDO DEL SCROLL
-    scroll_c = parseInt($("#contact").height()); // VALOR DE TU DIV
-    if (window_c > scroll_c) { // SI EL SCROLL HA SUPERADO EL ALTO DE TU DIV
-       // ACA MUESTRAS EL OTRO DIV Y EL OCULTAS EL DIV QUE QUIERES
-       $("#contact-click").addClass("active");
-    } else {
       $("#contact-click").removeClass("active");
+
+    } else if (window_a < scroll_p){
+      $("#portfolio-click").addClass("active");
+      $("#about-click").removeClass("active");
+      $("#contact-click").removeClass("active");
+
+    } else{
+      $("#contact-click").addClass("active");
+      $("#about-click").removeClass("active");
+      $("#portfolio-click").removeClass("active");
     }
 });

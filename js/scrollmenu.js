@@ -11,6 +11,7 @@ $(document).ready(function(){
 		else {
 			$("#menu").removeClass("menu-fix"); //remove class menu-fix from nav bar
 		}
+		//if ($(window).scrollTop()  )
 	});
 
 });
