@@ -1,0 +1,38 @@
+/* my fonts */
+
+@font-face
+{
+  font-family:"nunito";
+  src: url("../fonts/my-fonts/Nunito-Regular.ttf");
+}
+
+@font-face
+{
+  font-family:"play";
+  src: url("../fonts/my-fonts/Play-Regular.ttf");
+}
+
+@font-face
+{
+  font-family:"varela";
+  src: url("../fonts/my-fonts/VarelaRound-Regular.ttf");
+}
+
+@font-face
+{
+   font-family:"harmattan";
+   src: url("../fonts/my-fonts/Harmattan-Regular.ttf");
+}
+
+@font-face
+{
+  font-family:"jura";
+  src: url("../fonts/my-fonts/Jura-Regular.ttf");
+}
+
+@font-face
+{
+  font-family:"rajd";
+  src: url("../fonts/my-fonts/Rajdhani-Regular.ttf");
+}
+/* end my fonts */

@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/my-fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/css.css" />
     <!--<link rel="shortcut icon" href="/favicon.ico" />-->
@@ -48,8 +50,8 @@
           <div class="row">
             <!-- Description about person-->
             <div class="col-sm-8 col-md-8">
-              <h1 class="yellow-personal">I'm Joseph Hodgers</h1>
-              <h2>Tengo formación y experiencia en múltiples disciplinas de
+              <h1 class="yellow-personal primary-text">I'm Joseph Hodgers</h1>
+              <h2 class="primary-text">Tengo formación y experiencia en múltiples disciplinas de
                 diseño web y desarrollo front-end como HTML5 y CSS3, páginas
                 web adaptables a todos los dispositivos -Responsive Design-.
                 Me gusta crear código limpio y reutilizable y
@@ -57,7 +59,7 @@
                 page-. Además, también poseo una gran atención a los detalles
                 y pasión por mi trabajo.</h2>
               <hr class="hr-m"/>
-              <h3>Front-End Developer and UX/UI designer.</h3>
+              <h3 class="secundary-text">Front-End Developer and UX/UI designer.</h3>
             </div>
 
             <!-- Photo about person -->
@@ -78,7 +80,7 @@
           <ul class="row">
             <li class="col-sm-6 col-md-4">
               <a href="link" target="_blank">
-                <img src="img/nombreimagen.jpg" alt="work preview">
+                <img class="img img-responsive" src="img/Proyecto1.png" alt="work preview">
               </a>
             </li>
             <li class="col-sm-6 col-md-4">
@@ -123,39 +125,47 @@
               <div id="feedback">
                 <form id="contact-form" action="#contact" method="post">
                   <div>
-                    <div id="name-input">
-                      <label for="name">Name: </label>
-                      <input id="name" type="text" name="name" value="Your name">
+                    <div id="name-input" class="row">
+                      <label for="name" class="col-sm-4 col-m-4 text-right">Name: </label>
+                      <input id="name" class="col-sm-6 col-m-6" type="text" name="name" placeholder="Your name">
                     </div>
                   </div>
                   <div>
-                    <div id="email-input">
-                      <label for="email">Email: </label>
-                      <input id="email" type="text" name="email" value="email">
+                    <div id="lastname-input" class="row">
+                      <label for="lastname" class="col-sm-4 col-m-4 text-right">Last Name: </label>
+                      <input id="lastname" class="col-sm-6 col-m-6" type="text" name="name" placeholder="Your last name">
                     </div>
                   </div>
                   <div>
-                    <div id="message-input">
-                      <label for="message">Comment: </label>
-                      <input id="message" type="text" name="message" value="What's Up">
+                    <div id="email-input" class="row">
+                      <label for="email" class="col-sm-4 col-m-4 text-right">Email: </label>
+                      <input id="email" class="col-sm-6 col-m-6" type="text" name="email" placeholder="Email">
                     </div>
                   </div>
                   <div>
-                    <div id="submit-form">
-                      <button type="submit" name="send" class="btn btn-sm btn-default fa">Send It</button>
+                    <div id="message-input" class="row">
+                      <label for="message" class="col-sm-4 col-m-4 text-right">Comment: </label>
+                      <textarea id="message" class="col-sm-6 col-m-6" name="message" placeholder="What's New"></textarea>
+                    </div>
+                  </div>
+                  <div>
+                    <div id="submit-form" class="row">
+                      <span class="col-sm-4 col-m-4"></span>
+                      <button type="submit" name="send" class="col-sm-4 col-m-4 btn btn-sm btn-warning fa">Send It</button>
                     </div>
                   </div>
 
                 </form>
               </div>
+              <h3>Let me a touch!!</h3>
+              <button type="button" class="btn btn-sm btn-default fa fa-twitter" name="twitter"> Twitter</button>
+              <button type="button" class="btn btn-sm btn-default fa fa-github" name="github"> GitHub</button>
+              <button type="button" class="btn btn-sm btn-default fa fa-linkedin" name="linkedin"> Linkedin</button>
+              <button type="button" class="btn btn-sm btn-default fa fa-free-code-camp" name="freecodecamp"> FreeCodeCamp</button>
+
             </div>
           </div>
 
-          <h3>Let me a touch!!</h3>
-          <button type="button" class="btn btn-sm btn-default fa fa-twitter" name="twitter"> Twitter</button>
-          <button type="button" class="btn btn-sm btn-default fa fa-github" name="github"> GitHub</button>
-          <button type="button" class="btn btn-sm btn-default fa fa-linkedin" name="linkedin"> Linkedin</button>
-          <button type="button" class="btn btn-sm btn-default fa fa-free-code-camp" name="freecodecamp"> FreeCodeCamp</button>
 
       </section>
       <!-- End Contact -->
