@@ -15,12 +15,12 @@ $('a[href^="#"]').on('click', function (e) {
     $target = $(target);
     $('html, body').stop().animate({
         'scrollTop': $target.offset().top+2
-    }, 500, 'swing', function () {
+    }, 800, 'swing', function () {
         window.location.hash = target;
         $(document).on("scroll", onScroll);
     });
 });
-
+/*
 //funcion scroll
 $(window).scroll(function(){
     window_a = $(window).scrollTop(); // altura de mi scroll
@@ -34,14 +34,15 @@ $(window).scroll(function(){
       $("#portfolio-click").removeClass("active");
       $("#contact-click").removeClass("active");
 
-    } else if (window_a < scroll_p){
+    } else if ((window_a < scroll_p)||(window_a > scroll_c)){
       $("#portfolio-click").addClass("active");
       $("#about-click").removeClass("active");
       $("#contact-click").removeClass("active");
 
-    } else{
+    } else if (window_a < scroll_c ){
       $("#contact-click").addClass("active");
       $("#about-click").removeClass("active");
       $("#portfolio-click").removeClass("active");
     }
-});
+
+});*/
